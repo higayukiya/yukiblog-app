@@ -10,13 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_21_091450) do
+ActiveRecord::Schema.define(version: 2020_12_21_235846) do
 
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.text "contens"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+# Could not dump table "articles" because of following StandardError
+#   Unknown type 'content' for column 'contens'
 
 end
