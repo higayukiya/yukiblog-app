@@ -7,15 +7,22 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
   </head>
 
   <body>
     <header class="header">
-      <p class="header-pageTitle">新着記事</p>
+      <div class="header_logos">
+        <% if !current_page?(root_path) %>
+          <%= link_to :back do %>
+            <%= image_tag 'back.svg', class: 'header_back' %>
+          <% end %>
+        <% end %>
+        <p class="header_pageTitle">BlogApp</p>
+      </div>
         <div class="dropdown">
-          <%= image_tag 'default-avatar.png' , class: 'header_avatar dropbtn' %>
+          <%= image_tag 'default-avatar.png',class: 'header_avatar dropbtn' %>
           <div class="dropdwon-content">
             <a href="#">プロフィール</a>
             <a href="#">ログアウト</a>
