@@ -13,5 +13,5 @@
 #  index_comments_on_article_id  (article_id)
 #
 class Comment < ApplicationRecord
-    delongs_to :article
+    belongs_to :article
 end
