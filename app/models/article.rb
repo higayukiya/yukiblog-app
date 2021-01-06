@@ -3,11 +3,11 @@
 # Table name: articles
 #
 #  id         :integer          not null, primary key
-#  contens    :content
-#  title      :string
+#  contens    :text             not null
+#  title      :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
+#  user_id    :integer          not null
 #
 # Indexes
 #
@@ -24,6 +24,7 @@ class Article < ApplicationRecord
 
     validate :validate_title_contens_length
 
+    has_many :comments, dependent: :destroy
     belongs_to :user
 
     def display_created_at
