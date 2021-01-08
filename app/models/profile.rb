@@ -5,7 +5,7 @@
 #  id           :integer          not null, primary key
 #  birthday     :date
 #  gender       :integer
-#  introducsion :text
+#  introduction :text
 #  nickname     :string
 #  subscribed   :boolean          default(FALSE)
 #  created_at   :datetime         not null
@@ -19,4 +19,17 @@
 class Profile < ApplicationRecord
     enum gender: { male: 0, female: 1, other: 2 }
   belongs_to :user
+  has_one_attached :avatar
+
+  def age
+    return '不明' unless birthday.present?
+    years = Time.zone.now.year - birthday.year
+    days = Time.zone.now.yday - birthday.yday
+
+    if days <  0
+      "#{years - 1}歳"
+    else
+      "#{years}"
+    end
+  end
 end

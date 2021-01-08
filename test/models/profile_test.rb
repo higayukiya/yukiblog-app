@@ -5,7 +5,7 @@
 #  id           :integer          not null, primary key
 #  birthday     :date
 #  gender       :integer
-#  introducsion :text
+#  introduction :text
 #  nickname     :string
 #  subscribed   :boolean          default(FALSE)
 #  created_at   :datetime         not null
