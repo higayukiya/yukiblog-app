@@ -32,6 +32,7 @@ gem 'annotate'
 gem 'faker'
 gem 'hamlit'
 gem 'devise'
+gem 'aws-sdk-s3', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -40,6 +41,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'dotenv-rails'
 end
 
 group :development do
