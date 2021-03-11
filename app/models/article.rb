@@ -15,6 +15,7 @@
 #
 class Article < ApplicationRecord
     has_one_attached :eyecatch
+    has_rich_text :contens
 
     validates :title, presence: true
     validates :title, length: { minimum: 2 , maximum: 100 }
