@@ -30,6 +30,7 @@ gem 'image_processing', '~> 1.2'
 
 gem 'annotate'
 gem 'active_decorator'
+gem 'active_model_serializers'
 gem 'better_errors'
 gem 'faker'
 gem 'hamlit'
