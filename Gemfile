@@ -36,6 +36,7 @@ gem 'faker'
 gem 'hamlit'
 gem 'devise'
 gem 'aws-sdk-s3', require: false
+gem 'sidekiq'
 
 
 gem 'bootsnap', '>= 1.4.2', require: false
